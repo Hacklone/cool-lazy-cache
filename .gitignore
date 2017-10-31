@@ -1,0 +1,12 @@
+/dist
+/tmp
+
+/compiled
+
+/node_modules
+/typings
+
+/.vscode
+/.idea
+
+npm-debug.log

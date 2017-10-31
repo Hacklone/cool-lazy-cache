@@ -1,0 +1,43 @@
+{
+  "name": "cool-lazy-cache",
+  "version": "1.0.0",
+  "description": "A lazy data cache that can be used with async/await, promises and observables.",
+  "main": "index.js",
+  "devDependencies": {
+    "typescript": "^2.6.1"
+  },
+  "scripts": {
+    "clean": "rm -rf ./dist",
+    "compile": "./node_modules/.bin/tsc",
+    "copy-files": "cp ./README.md ./dist/README.md && cp ./package.json ./dist/package.json",
+    "build": "npm run clean && npm run compile && npm run copy-files"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hacklone/cool-lazy-cache.git"
+  },
+  "keywords": [
+    "lazy",
+    "cache",
+    "cool",
+    "async",
+    "await",
+    "promise",
+    "observable"
+  ],
+  "author": "Hacklone <toakak@gmail.com>",
+  "license": "MIT",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/Hacklone/cool-lazy-cache/raw/master/LICENSE"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/Hacklone/cool-lazy-cache/issues"
+  },
+  "homepage": "https://github.com/Hacklone/cool-lazy-cache#readme",
+  "dependencies": {
+    "rxjs": "^5.5.2"
+  }
+}
