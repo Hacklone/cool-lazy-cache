@@ -15,6 +15,10 @@ export class DataCache<T> {
     this._data = data;
     this._dataObservable.next(this._data);
     this._lastStoreDate = new Date().getTime();
+
+    setTimeout(() => {
+      this._tryRemoveOutdatedData();
+    }, this._millisecondsToCache + 5000);
   }
 
   public get hasValidCache(): boolean {
@@ -30,6 +34,8 @@ export class DataCache<T> {
   public getData(): T {
     if (!this.hasValidCache) {
       this._data = null;
+
+      return null;
     }
 
     return JSON.parse(JSON.stringify(this._data));
@@ -42,5 +48,13 @@ export class DataCache<T> {
   public invalidate() {
     this._data = null;
     this._lastStoreDate = null;
+  }
+
+  private _tryRemoveOutdatedData() {
+    if (this.hasValidCache) {
+      return;
+    }
+
+    this._data = null;
   }
 }
