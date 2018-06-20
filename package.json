@@ -1,10 +1,10 @@
 {
   "name": "cool-lazy-cache",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A lazy data cache that can be used with async/await, promises and observables.",
   "main": "index.js",
   "devDependencies": {
-    "typescript": "^2.6.1"
+    "typescript": "^2.9.2"
   },
   "scripts": {
     "clean": "rm -rf ./dist",
@@ -38,6 +38,6 @@
   },
   "homepage": "https://github.com/Hacklone/cool-lazy-cache#readme",
   "dependencies": {
-    "rxjs": "^5.5.2"
+    "rxjs": "^6.2.1"
   }
 }

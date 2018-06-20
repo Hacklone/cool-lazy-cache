@@ -1,5 +1,5 @@
-import { Observable } from 'rxjs/Observable';
-import { ReplaySubject } from 'rxjs/ReplaySubject';
+import { ReplaySubject } from 'rxjs/internal/ReplaySubject';
+import { Observable } from 'rxjs/internal/Observable';
 
 export class DataCache<T> {
   private _data: T;
